@@ -10,9 +10,6 @@ NAME=platform1000
 DOMAIN=energy.azure.com
 PARTITION=platform1000-opendes
 
-DATA_PARTITION=$NAME-$PARTITION
-OSDU_ENDPOINT=https://$NAME.$DOMAIN
-LEGAL_TAG=${DATA_PARTITION}-open-test-data
 LOGIN_ENDPOINT=https://login.microsoftonline.com/${AZURE_TENANT}/oauth2/v2.0/token
 SCOPE="$CLIENT_ID/.default openid profile offline_access"
 URL="https://login.microsoftonline.com/${AZURE_TENANT}/oauth2/v2.0/authorize?client_id=${CLIENT_ID}&response_type=code&redirect_uri=http%3a%2f%2flocalhost%3a8080&response_mode=query&scope=${CLIENT_ID}%2f.default&state=12345&sso_reload=true"
